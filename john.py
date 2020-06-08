@@ -19,7 +19,6 @@ resp = client.message(question)
 
 a = resp['entities']['intent'][0]['value']
 if a in intents:
-  print("Yes")
   try:
   	if resp['entities']['aboutus'][0]['value'] in intents['about']:
   		about = resp['entities']['about'][0]['value']
@@ -30,4 +29,3 @@ if a in intents:
 
   except:
     print("Error")
-print(resp)
